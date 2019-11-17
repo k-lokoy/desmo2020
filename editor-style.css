@@ -437,6 +437,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-family);
   word-wrap: break-word;
+  font-smooth: always;
 }
 
 /* Headings */

@@ -11,3 +11,12 @@ main {
   max-width: 1140px;
   margin: 0 auto calc(var(--spacing) * 2);
 }
+
+@media (min-width: $tablet) {
+  .single,
+  .page {
+    main {
+      margin-top: calc(var(--spacing) * 2)
+    }
+  }
+}

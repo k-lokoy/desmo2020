@@ -42,6 +42,11 @@ License: Ubuntu Font License
 
 # Changelog
 
+1.0.1 - 2019.11.17
+- Fixed content margin
+- Fixed menu layout on mobile
+- Added font smoothing
+
 1.0.0 - 2019.11.17
 - Initial release
 

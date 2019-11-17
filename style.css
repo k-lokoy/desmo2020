@@ -6,7 +6,7 @@
   Author URI: http://lokoydesign.github.io/
   Description: Custom theme for brilliant-pearl.com
   Requires at least: WordPress 5.0.0
-  Version: 1.0.0
+  Version: 1.0.1
   License: GNU General Public License v3 or later
   License URI: http://www.gnu.org/licenses/gpl-3.0.html  
   Tags: one-column, two-columns, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, full-width-template, post-formats, theme-options, threaded-comments, translation-ready, blog
@@ -468,6 +468,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-family);
   word-wrap: break-word;
+  font-smooth: always;
 }
 
 /* Headings */
@@ -941,15 +942,19 @@ body.has-featured-image .top-bar {
           transform: rotate(-45deg);
 }
 
+#site-header {
+  position: fixed;
+}
+
 #site-header-nav {
   background-color: var(--color-bg-2);
-  position: fixed;
+  position: absolute;
   display: grid;
   grid-template-columns: minmax(0, 100%);
   grid-gap: .5em;
   margin: 0;
-  padding: -webkit-calc(24px + 4em) var(--spacing) var(--spacing);
-  padding: calc(24px + 4em) var(--spacing) var(--spacing);
+  padding: -webkit-calc(30px + 3em) var(--spacing) var(--spacing);
+  padding: calc(30px + 3em) var(--spacing) var(--spacing);
   text-transform: uppercase;
   font-size: 1.5rem;
   width: -webkit-calc(100% - var(--spacing) * 2);
@@ -957,14 +962,12 @@ body.has-featured-image .top-bar {
   top: 0;
   left: 0;
   right: 0;
-  visibility: hidden;
-  opacity: 0;
   -webkit-transition: opacity .5s ease-in-out;
   -o-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
   z-index: 10;
+  display: none;
   overflow-y: auto;
-  bottom: 0;
 }
 
 #site-header-nav a {
@@ -987,8 +990,7 @@ body.has-featured-image .top-bar {
 }
 
 #site-header-nav-toggle:checked ~ #site-header-nav {
-  visibility: visible;
-  opacity: 1;
+  display: grid;
 }
 
 body.has-featured-image .site-header,
@@ -1233,6 +1235,14 @@ main {
   max-width: 1140px;
   margin: 0 auto -webkit-calc(var(--spacing) * 2);
   margin: 0 auto calc(var(--spacing) * 2);
+}
+
+@media (min-width: 768px) {
+  .single main,
+  .page main {
+    margin-top: -webkit-calc(var(--spacing) * 2);
+    margin-top: calc(var(--spacing) * 2);
+  }
 }
 
 /* Content: Headers */
