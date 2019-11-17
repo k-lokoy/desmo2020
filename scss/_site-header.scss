@@ -1,0 +1,36 @@
+.site-header {
+  background-color: var(--color-bg-2);
+  color: var(--color-txt-2);
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, calc(840px - var(--spacing))) minmax(100px, 300px) minmax(0, auto);
+  grid-gap: var(--spacing);
+  align-items: center;
+  padding: var(--spacing) 0;
+
+  > *:first-child {
+    grid-column: 2;
+  }
+
+  a {
+    color: var(--color-txt-2);
+  }
+}
+
+.site-identity {
+  display: grid;
+}
+
+body.has-featured-image {
+  .site-header-wrapper {
+    min-height: 100vh;
+  }
+
+  .site-header {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.custom-logo-link img {
+  filter: grayscale(100%) sepia(50%) drop-shadow(var(--shadow)) !important;
+}

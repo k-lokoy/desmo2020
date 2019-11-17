@@ -1,0 +1,195 @@
+# Copyright (C) 2019 desmo2020
+# This file is distributed under the same license as the desmo2020 package.
+msgid ""
+msgstr ""
+"Project-Id-Version: desmo2020\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Lokøy Design <kennethlokoy@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://github.com/lokoydesign/desmo2020/issues\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: \n"
+"Language: nb\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:16
+msgid "404 Not Found"
+msgstr "404 Ikke funnet"
+
+#: 404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Siden finnes ikke."
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Ingenting ble funnet. Bruk søkefeltet eller menyen for å finne innholdet. "
+
+#: archive.php:32, search.php:38
+msgid "Prev"
+msgstr "Forrige"
+
+#: archive.php:32, search.php:38
+msgid "Previous page"
+msgstr "Forrige side"
+
+#: archive.php:34, search.php:39, template-parts/footer.php:41
+msgid "Next"
+msgstr "Neste"
+
+#: archive.php:34, search.php:39
+msgid "Next page"
+msgstr "Neste side"
+
+#: archive.php:36, search.php:40
+msgid "Page"
+msgstr "Side"
+
+#: comments.php:21
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s kommentarer om &ldquo;%2$s&rdquo;"
+msgstr[1] ""
+
+#: comments.php:37, comments.php:37
+msgid "Older comments"
+msgstr "Eldre kommentarer"
+
+#: comments.php:38, comments.php:38
+msgid "Newer comments"
+msgstr "Nyere kommentarer"
+
+#: footer.php:23
+msgid "Scroll to the top"
+msgstr "Bla til toppen"
+
+#: functions.php:97
+msgid "Header"
+msgstr "Toppfelt"
+
+#: header.php:72
+msgid "Toggle menu"
+msgstr "Skjul/vis meny"
+
+#: header.php:116, template-parts/header.php:15
+msgid "Untitled post"
+msgstr "Innlegg uten navn"
+
+#: search.php:19
+msgid "Search results for: %s"
+msgstr "Søkeresultater for: %s"
+
+#: search.php:24
+msgid "Nothing found"
+msgstr "Ingen treff"
+
+#: inc/customizer.php:19
+msgid "Secondary background color"
+msgstr "Sekundær bakgrunnsfarge"
+
+#: inc/customizer.php:30
+msgid "Text color"
+msgstr "Tekstfarge"
+
+#: inc/customizer.php:41
+msgid "Secondary text color"
+msgstr "Sekundær tekstfarge"
+
+#: inc/customizer.php:52
+msgid "Links"
+msgstr "Lenker"
+
+#: inc/customizer.php:63
+msgid "Borders"
+msgstr "Kantlinjer"
+
+#: inc/customizer.php:69
+msgid "Top bar"
+msgstr "Topprad"
+
+#: inc/customizer.php:80
+msgid "Phone number"
+msgstr "Telefonnummer"
+
+#: inc/customizer.php:92
+msgid "E-mail"
+msgstr "E-post"
+
+#: inc/customizer.php:99
+msgid "Footer"
+msgstr "Bunnrad"
+
+#: inc/customizer.php:110
+msgid "Footer text"
+msgstr "Bunnradstekst"
+
+#: inc/customizer.php:122
+msgid "Display Copyright icon"
+msgstr "Vis Copyright-ikon"
+
+#: inc/customizer.php:134
+msgid "Display current year"
+msgstr "Vis gjeldende år"
+
+#: inc/widget-areas.php:13
+msgid "Sidebar one"
+msgstr "Sidefelt en"
+
+#: inc/widget-areas.php:15
+msgid "Widget area one"
+msgstr "Widget område en"
+
+#: inc/widget-areas.php:23
+msgid "Sidebar two"
+msgstr "Sidefelt to"
+
+#: inc/widget-areas.php:25
+msgid "Widget area two"
+msgstr "Widget område to"
+
+#: inc/widget-areas.php:33
+msgid "Sidebar three"
+msgstr "Sidefelt tre"
+
+#: inc/widget-areas.php:35
+msgid "Widget area three"
+msgstr "Widget område tre"
+
+#: template-parts/entry-aside.php:18, template-parts/entry-audio.php:37,
+#: template-parts/entry-gallery.php:28, template-parts/entry-video.php:36,
+#: template-parts/entry.php:22
+msgid "Pages:"
+msgstr "Sider:"
+
+#: template-parts/entry-meta.php:25
+msgid "Edit"
+msgstr "Rediger"
+
+#: template-parts/entry-none.php:14
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/footer.php:35
+msgid "Previous post"
+msgstr ""
+
+#: template-parts/footer.php:37
+msgid "Previous"
+msgstr ""
+
+#: template-parts/footer.php:40
+msgid "Next post"
+msgstr ""

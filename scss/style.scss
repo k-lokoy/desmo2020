@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/*
+  Theme Name: desmo2020
+  Theme URI: https://github.com/lokoydesign/desmo2020
+  Author: Lokøy Design
+  Author URI: http://lokoydesign.github.io/
+  Description: Custom theme for brilliant-pearl.com
+  Requires at least: WordPress 5.0.0
+  Version: 1.0.0
+  License: GNU General Public License v3 or later
+  License URI: http://www.gnu.org/licenses/gpl-3.0.html  
+  Tags: one-column, two-columns, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, full-width-template, post-formats, theme-options, threaded-comments, translation-ready, blog
+  Text Domain: desmo2020
+
+  desmo2020 WordPress Theme, Copyright (C) 2019, Lokøy Design
+  desmo2020 is distributed under the terms of the GNU GPL v3
+*/
+
+/* Table of Contents
+  -------------------------------
+  # Variables
+  # Normalize
+  # Elements
+    ## Forms
+  # Site header
+    ## Top bar
+    ## Navigation
+    ## Identity
+    ## Featured
+  # Home
+  # Content
+    ## Header
+    ## Media
+    ## Navigation
+    ## Alignment  
+    ## Post formats
+    ## Blocks
+    ## Footer
+  # Comments
+  # Widgets
+  # Site footer
+  # Acccessibility
+*/
+
+/* Variables */
+@import "variables";
+
+/* Normalize */
+@import "normalize";
+
+/* Elements */
+@import "elements";
+
+/* Elements: Forms */
+@import "elements/forms";
+
+/* Site header */
+@import "site-header";
+
+/* Site header: Top bar */
+@import "site-header/top-bar";
+
+/* Site header: Navigation */
+@import "site-header/navigation";
+
+/* Site header: Featured */
+@import "site-header/featured";
+
+/* Home */
+@import "home";
+
+/* Content */
+@import "content";
+
+/* Content: Headers */
+@import "content/header";
+
+/* Content: Media */
+@import "content/media";
+
+/* Content: Navigation */
+@import "content/navigation";
+
+/* Content: Alignment */
+@import "content/alignment";
+
+/* Content: Post formats */
+@import "content/post-formats";
+
+/* Content: Blocks */
+@import "content/blocks";
+
+/* Content: Footer */
+@import "content/footer";
+
+/* Comments */
+@import "comments";
+
+/* Widgets */
+@import "widgets";
+
+/* Site footer */
+@import "site-footer";
+
+/* Acccessibility */
+@import "acccessibility";

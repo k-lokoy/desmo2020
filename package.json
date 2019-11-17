@@ -1,0 +1,33 @@
+{
+  "name": "desmo2020",
+  "version": "1.0.0",
+  "description": "Custom WordPress theme for Brilliant-Pearl",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokoydesign/desmo2020.git"
+  },
+  "keywords": [],
+  "author": "Lokøy Design",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/lokoydesign/desmo2020/issues"
+  },
+  "homepage": "https://github.com/lokoydesign/desmo2020#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/register": "^7.7.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sort": "^2.0.0",
+    "gulp-wp-pot": "^2.3.5",
+    "gulp-zip": "^5.0.1"
+  }
+}

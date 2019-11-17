@@ -1,0 +1,144 @@
+:root {
+  font-size: var(--font-size);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  word-wrap: break-word;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+h1 { font-size: calc(var(--font-size) * 2.5); }
+h2 { font-size: calc(var(--font-size) * 2.0); }
+h3 { font-size: calc(var(--font-size) * 1.6); }
+h4 { font-size: calc(var(--font-size) * 1.2); }
+h5 { font-size: calc(var(--font-size) * 1.0); }
+h6 { font-size: calc(var(--font-size) * 0.8); }
+
+/* Paragraphs */
+p {
+  line-height: 1.5em;
+  margin: 0 0 1.5em;
+}
+
+/* Blockquotes */
+blockquote {
+  font-style: italic;
+  border-left: 0.125em solid var(--color-border);
+  padding-left: 1em;
+  margin: 0 0 1.5em 1em;
+}
+
+/* Tables */
+table,
+td,
+th {
+  border: 0.0625em solid var(--color-border);
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-width: 0.0625em 0 0 0.0625em;
+  max-width: 100%;
+  margin-bottom: 1.5em;
+}
+
+td,
+th {
+  border-width: 0 0.0625em 0.0625em 0;
+  text-align: left;
+  padding: .5em;
+}
+
+/* Definition lists */
+dt{ font-weight: bold; }
+dd { margin: 0 0 1em 1em; }
+
+/* Lists */
+ul {
+  list-style: disc;
+}
+
+ul,
+ol {
+  margin-left: 2em;
+  padding: 0;
+}
+
+/* Address */
+address {
+  font-style: italic;
+}
+
+/* Anchor */
+a {
+  color: var(--color-anchor);
+  text-decoration: none;
+  transition: .3s ease-in-out;
+}
+
+/* Abbreviation tag*/
+abbr {
+  cursor: help;
+}
+
+/* Acronym tag */
+acronym {
+  cursor: help;
+}
+
+/* Cite tag */
+cite {
+  font-style: italic;
+}
+
+/* Code tag */
+code {
+
+}
+
+/* Horisontal rule tag */
+hr {
+  width: 100%;
+  border: none;
+  height: 0.0625em;
+  background-color: var(--color-border);
+}
+
+/* Insert tag */
+ins {
+  text-decoration: none;
+  background: #FFF9C0;
+  color: #000000;
+}
+
+/* Preformated text */
+pre {
+  border: 0.0625em dotted var(--color-border);
+  border-radius: 0.1875em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em;
+  word-wrap: normal;
+}
+
+@media only screen and (max-width: $tablet) {
+  table {
+    display: inline-block;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+}

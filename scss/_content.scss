@@ -1,0 +1,13 @@
+main,
+main > section {
+  display: grid;
+  grid-template-columns: minmax(0, 100%);
+  grid-gap: var(--spacing);
+  align-items: start;
+}
+
+main {
+  width: calc(100% - var(--spacing) * 2);
+  max-width: 1140px;
+  margin: 0 auto calc(var(--spacing) * 2);
+}

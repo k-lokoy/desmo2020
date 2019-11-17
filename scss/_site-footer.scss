@@ -1,0 +1,57 @@
+.site-footer {
+  background-color: var(--color-bg-2);
+  color: var(--color-txt-2);
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1140px) minmax(0, auto);
+  grid-gap: var(--spacing);
+  padding: calc(var(--spacing) * 0.5) 0;
+  font-size: .8rem;
+
+  > *:first-child {
+    grid-column: 2;
+    text-align: center;
+  }
+  
+  a {
+    color: var(--color-txt-2);
+  }
+}
+
+#scroll-to-top {
+  background-color: var(--color-anchor);
+  position: fixed;
+  bottom: -2000px;
+  right: 20px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  overflow: hidden;
+  transition: bottom 1s ease-in-out, background-color .3s ease-in-out;
+
+  &::before,
+  &::after {
+    background-color: var(--color-txt-2);
+    position: absolute;
+    content: "";
+    width: 43%;
+    height: 2px;
+    transition: background-color .3s ease-in-out;
+  }
+
+  &::before {
+    top: 50%;
+    right: 15%;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    top: 50%;
+    left: 15%;
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    background-color: var(--color-bg-2);
+  }
+}

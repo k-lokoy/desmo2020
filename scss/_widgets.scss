@@ -1,0 +1,32 @@
+.widget-areas-wrapper {
+  background-color: var(--color-bg-2);
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1140px) minmax(0, auto);
+  grid-gap: var(--spacing);
+  padding: var(--spacing) 0;
+  color: var(--color-txt-2);
+
+  > * { grid-column: 2 }
+}
+
+.widget {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    ul {
+      margin: 0 0 0 1rem;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .widget-areas-wrapper {
+    grid-template-columns: minmax(0, auto) repeat(3, minmax(0, calc((1140px - var(--spacing) * 2) / 3))) minmax(0, auto);
+
+    > *:nth-child(1) { grid-column: 2 }
+    > *:nth-child(2) { grid-column: 3 }
+    > *:nth-child(3) { grid-column: 4 }
+  }
+}
