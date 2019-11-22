@@ -6,7 +6,7 @@
   Author URI: http://lokoydesign.github.io/
   Description: Custom theme for brilliant-pearl.com
   Requires at least: WordPress 5.0.0
-  Version: 1.0.1
+  Version: 1.1.0
   License: GNU General Public License v3 or later
   License URI: http://www.gnu.org/licenses/gpl-3.0.html  
   Tags: one-column, two-columns, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, full-width-template, post-formats, theme-options, threaded-comments, translation-ready, blog
@@ -1249,7 +1249,6 @@ main {
 .entry-header {
   display: grid;
   grid-template-columns: minmax(0, auto) minmax(0, 1140px) minmax(0, auto);
-  margin-bottom: var(--spacing);
 }
 
 .entry-header > * {
@@ -1331,9 +1330,38 @@ object {
   font-size: .8rem;
 }
 
+.wp-caption,
+.gallery-item {
+  background-color: #FFFFFF;
+  padding: -webkit-calc(var(--spacing) * 0.5);
+  padding: calc(var(--spacing) * 0.5);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  -webkit-border-radius: .25em;
+          border-radius: .25em;
+}
+
+.wp-caption img,
+.gallery-item img {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .wp-caption {
   max-width: -webkit-calc(100% - 1em);
   max-width: calc(100% - 1em);
+}
+
+.wp-caption-text {
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+  padding: -webkit-calc(var(--spacing) * 0.5);
+  padding: calc(var(--spacing) * 0.5);
+  padding-bottom: 0;
+  color: #000000;
 }
 
 figure {
@@ -1649,8 +1677,6 @@ body.archive .format-link article {
   display: grid;
   grid-template-columns: minmax(0, 100%);
   grid-gap: var(--spacing);
-  margin: -webkit-calc(var(--spacing) * 4) 0;
-  margin: calc(var(--spacing) * 4) 0;
 }
 
 .post-categories span:first-child,
@@ -1766,12 +1792,20 @@ body.archive .format-link article {
   display: grid;
   grid-template-columns: minmax(0, auto) minmax(0, 1140px) minmax(0, auto);
   grid-gap: var(--spacing);
-  padding: var(--spacing) 0;
+  padding: -webkit-calc(var(--spacing) * 2) 0;
+  padding: calc(var(--spacing) * 2) 0;
   color: var(--color-txt-2);
 }
 
 .widget-areas-wrapper > * {
   grid-column: 2;
+}
+
+.widget {
+  display: grid;
+  grid-template-columns: minmax(0, 100%);
+  grid-gap: var(--spacing);
+  line-height: 1.4rem;
 }
 
 .widget ul {
@@ -1784,18 +1818,22 @@ body.archive .format-link article {
   margin: 0 0 0 1rem;
 }
 
+.widget-title {
+  margin: 0;
+}
+
 @media (min-width: 1140px) {
   .widget-areas-wrapper {
     grid-template-columns: minmax(0, auto) repeat(3, minmax(0, -webkit-calc((1140px - var(--spacing) * 2) / 3))) minmax(0, auto);
     grid-template-columns: minmax(0, auto) repeat(3, minmax(0, calc((1140px - var(--spacing) * 2) / 3))) minmax(0, auto);
   }
-  .widget-areas-wrapper > *:nth-child(1) {
+  .widget-areas-wrapper > #widget-area-one {
     grid-column: 2;
   }
-  .widget-areas-wrapper > *:nth-child(2) {
+  .widget-areas-wrapper > #widget-area-two {
     grid-column: 3;
   }
-  .widget-areas-wrapper > *:nth-child(3) {
+  .widget-areas-wrapper > #widget-area-three {
     grid-column: 4;
   }
 }

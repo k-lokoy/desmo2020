@@ -91,6 +91,7 @@ if ( !function_exists( "desmo2020_setup" ) ) {
 
     //https://developer.wordpress.org/reference/functions/add_image_size/
     add_image_size( "desmo2020-featured-image", 1140, 642, false );
+    add_image_size( "desmo2020-full-width",     1140 );
 
     // Navigation
     register_nav_menus( array (

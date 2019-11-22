@@ -3,13 +3,18 @@
   display: grid;
   grid-template-columns: minmax(0, auto) minmax(0, 1140px) minmax(0, auto);
   grid-gap: var(--spacing);
-  padding: var(--spacing) 0;
+  padding: calc(var(--spacing) * 2) 0;
   color: var(--color-txt-2);
 
   > * { grid-column: 2 }
 }
 
 .widget {
+  display: grid;
+  grid-template-columns: minmax(0, 100%);
+  grid-gap: var(--spacing);
+  line-height: 1.4rem;
+
   ul {
     list-style: none;
     padding: 0;
@@ -21,12 +26,16 @@
   }
 }
 
+.widget-title {
+  margin: 0;
+}
+
 @media (min-width: $desktop) {
   .widget-areas-wrapper {
     grid-template-columns: minmax(0, auto) repeat(3, minmax(0, calc((1140px - var(--spacing) * 2) / 3))) minmax(0, auto);
 
-    > *:nth-child(1) { grid-column: 2 }
-    > *:nth-child(2) { grid-column: 3 }
-    > *:nth-child(3) { grid-column: 4 }
+    > #widget-area-one   { grid-column: 2 }
+    > #widget-area-two   { grid-column: 3 }
+    > #widget-area-three { grid-column: 4 }
   }
 }

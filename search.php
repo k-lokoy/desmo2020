@@ -4,7 +4,7 @@
  *
  * @package desmo2020
  * @since   1.0.0
- * @version 1.0.0
+ * @version 1.1.0
  */
 ?>
 
@@ -21,7 +21,7 @@
       );
     } else {
       printf(
-        "<h4>" . __( "Nothing found", "desmo2020" ) . "</h4>"
+        "<h1>" . __( "Nothing found", "desmo2020" ) . "</h1>"
       );
     }
     ?>
@@ -31,7 +31,7 @@
   if ( have_posts() ) {
     while ( have_posts() ) {
       the_post();
-      get_template_part( "template-parts/entry", "excerpt");
+      get_template_part( "template-parts/content", "excerpt");
     }
 
     the_posts_pagination( array(
@@ -42,7 +42,7 @@
   
   } else {
     
-    get_template_part( "template-parts/entry", "none");
+    get_template_part( "template-parts/content", "none");
   
   }
   ?>

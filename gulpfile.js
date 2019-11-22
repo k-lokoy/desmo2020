@@ -5,11 +5,12 @@ const prefix  = require("gulp-autoprefixer")
 const wpPot   = require("gulp-wp-pot")
 const sort    = require("gulp-sort")
 const zip     = require("gulp-zip")
+const pkg     = require("./package.json")
 
 const info = {
   name:      "desmo2020",
   slug:      "desmo2020",
-  version:   "1.0.1",
+  version:   pkg.version,
   author:    "Lokøy Design",
   email:     "kennethlokoy@gmail.com",
   bugReport: "https://github.com/lokoydesign/desmo2020/issues"

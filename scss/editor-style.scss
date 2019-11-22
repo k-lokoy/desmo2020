@@ -16,6 +16,10 @@
 /* Normalize */
 @import "normalize";
 
+body {
+  margin: var(--spacing);
+}
+
 /* Elements */
 @import "elements";
 

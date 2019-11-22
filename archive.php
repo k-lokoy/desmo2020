@@ -4,7 +4,7 @@
  *
  * @package desmo2020
  * @since   1.0.0
- * @version 1.0.0
+ * @version 1.1.0
  */
 ?>
 
@@ -24,7 +24,7 @@
   
       the_post(); 
     
-      get_template_part( "template-parts/entry", get_post_format() );
+      get_template_part( "template-parts/content", get_post_format() );
     }
 
     the_posts_pagination( array (
@@ -38,7 +38,7 @@
 
   } else {
 
-    get_template_part( 'template-parts/entry', 'none' );
+    get_template_part( 'template-parts/content', 'none' );
 
   }
   ?>

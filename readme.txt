@@ -42,6 +42,15 @@ License: Ubuntu Font License
 
 # Changelog
 
+1.1.0 - 2019.11.22
+- Added support for image and attachment pages
+- added full width image size
+- Fixed widget areas layout and spacing
+- Fixed missing translations
+- Fixed editor margin
+- Improved content layouts
+- Improved styling for images and captions
+
 1.0.1 - 2019.11.17
 - Fixed content margin
 - Fixed menu layout on mobile
@@ -49,7 +58,3 @@ License: Ubuntu Font License
 
 1.0.0 - 2019.11.17
 - Initial release
-
-# TODO
-- Improve editor styles
-- Add support for attachment pages

@@ -5,7 +5,7 @@
  *
  * @package desmo2020
  * @since   1.0.0
- * @version 1.0.0
+ * @version 1.1.0
  */
 ?>
 <!DOCTYPE html>
@@ -108,18 +108,39 @@
         ?>
     
         <header class="site-featured-entry-header entry-header">
-          <?php
-          the_post();
+          <?php the_post(); ?>
           
+          <?php
           printf(
             "<h1 class=>%s</h1>",
             get_the_title() === "" ? __( "Untitled post", "desmo2020" ) : get_the_title()
           );
-
-          get_template_part( "template-parts/entry-meta" );
-          
-          rewind_posts();
           ?>
+
+
+          <div class="entry-meta">
+            <?php
+            if ( !is_page() ) {
+              printf(
+                '<span><a href="%1$s">%2$s</a></span>',
+                esc_url( get_permalink() ),
+                get_the_date()
+              );
+            }
+            ?>
+
+            <?php
+            edit_post_link(
+              sprintf(
+                '%1$s<span class="screen-reader-text">%1$s "%2$s"</span>',
+                __( 'Edit', 'desmo2020' ),
+                get_the_title()
+              )
+            );
+            ?>
+          </div>
+          
+          <?php rewind_posts(); ?>
         </header><!-- .entry-header -->
       
       <?php endif; ?>

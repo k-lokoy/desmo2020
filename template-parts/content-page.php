@@ -1,20 +1,20 @@
 <?php
 /**
- * Template for displaying content
+ * Template for displaying page content
  *
  * @package desmo2020
- * @since   1.0.0
- * @version 1.0.0
+ * @since   1.1.0
+ * @version 1.1.0
  */
 ?>
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-  <?php if ( !is_singular() ) get_template_part( "template-parts/header" ); ?>
-
-  <?php if ( !is_singular() ) get_template_part( "template-parts/thumbnail" ); ?>
+  <?php if ( get_the_post_thumbnail() !== "" ): ?>
+    <a class="post-thumbnail" href="<?php the_permalink() ?>">
+      <?php the_post_thumbnail( "desmo2020-featured-image" ); ?>
+    </a><!-- .post-thumbnail -->
+  <?php endif; ?>
 
   <article>
-
     <?php the_content(); ?>
 
     <?php
@@ -25,9 +25,5 @@
       "link_after"  => "</span>",
     ) );
     ?>
-
   </article>
-
-  <?php if ( is_singular() ) get_template_part( "template-parts/footer" ); ?>
-
 </section>
