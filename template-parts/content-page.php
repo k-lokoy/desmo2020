@@ -8,12 +8,6 @@
  */
 ?>
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <?php if ( get_the_post_thumbnail() !== "" ): ?>
-    <a class="post-thumbnail" href="<?php the_permalink() ?>">
-      <?php the_post_thumbnail( "desmo2020-featured-image" ); ?>
-    </a><!-- .post-thumbnail -->
-  <?php endif; ?>
-
   <article>
     <?php the_content(); ?>
 

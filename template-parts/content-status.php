@@ -37,7 +37,6 @@
       ) );
     }
     ?>
-
   </article>
 
   <?php if ( is_single() ): ?>

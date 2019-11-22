@@ -42,7 +42,10 @@ License: Ubuntu Font License
 
 # Changelog
 
-1.1.0 - 2019.11.22
+1.1.1 - 2019-11-22
+- Fixed post thumbnails showing up twice on some posts and pages
+
+1.1.0 - 2019-11-22
 - Added support for image and attachment pages
 - added full width image size
 - Fixed widget areas layout and spacing
@@ -51,10 +54,10 @@ License: Ubuntu Font License
 - Improved content layouts
 - Improved styling for images and captions
 
-1.0.1 - 2019.11.17
+1.0.1 - 2019-11-17
 - Fixed content margin
 - Fixed menu layout on mobile
 - Added font smoothing
 
-1.0.0 - 2019.11.17
+1.0.0 - 2019-11-17
 - Initial release

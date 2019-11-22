@@ -42,7 +42,7 @@
     </header>
   <?php endif; ?>
 
-  <?php if ( get_the_post_thumbnail() !== "" ): ?>
+  <?php if ( !is_singular() && get_the_post_thumbnail() !== "" ): ?>
     <a class="post-thumbnail" href="<?php the_permalink() ?>">
       <?php the_post_thumbnail( "desmo2020-featured-image" ); ?>
     </a><!-- .post-thumbnail -->

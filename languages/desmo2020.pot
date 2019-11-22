@@ -36,7 +36,7 @@ msgstr ""
 msgid "Previous page"
 msgstr ""
 
-#: archive.php:34, search.php:39, template-parts/content-aside.php:86, template-parts/content-audio.php:109, template-parts/content-gallery.php:101, template-parts/content-image.php:98, template-parts/content-link.php:76, template-parts/content-quote.php:76, template-parts/content-status.php:76, template-parts/content-video.php:110, template-parts/content.php:100
+#: archive.php:34, search.php:39, template-parts/content-aside.php:86, template-parts/content-audio.php:109, template-parts/content-gallery.php:101, template-parts/content-image.php:97, template-parts/content-link.php:76, template-parts/content-quote.php:76, template-parts/content-status.php:75, template-parts/content-video.php:110, template-parts/content.php:100
 msgid "Next"
 msgstr ""
 
@@ -75,11 +75,11 @@ msgstr ""
 msgid "Toggle menu"
 msgstr ""
 
-#: header.php:116, template-parts/content-audio.php:16, template-parts/content-excerpt.php:15, template-parts/content-gallery.php:16, template-parts/content-image.php:17, template-parts/content-video.php:16, template-parts/content.php:16
+#: header.php:116, template-parts/content-audio.php:16, template-parts/content-excerpt.php:15, template-parts/content-gallery.php:16, template-parts/content-image.php:16, template-parts/content-video.php:16, template-parts/content.php:16
 msgid "Untitled post"
 msgstr ""
 
-#: header.php:136, template-parts/content-aside.php:28, template-parts/content-audio.php:36, template-parts/content-excerpt.php:35, template-parts/content-gallery.php:36, template-parts/content-image.php:37, template-parts/content-link.php:18, template-parts/content-quote.php:18, template-parts/content-status.php:18, template-parts/content-video.php:36, template-parts/content.php:36
+#: header.php:136, template-parts/content-aside.php:28, template-parts/content-audio.php:36, template-parts/content-excerpt.php:35, template-parts/content-gallery.php:36, template-parts/content-image.php:36, template-parts/content-link.php:18, template-parts/content-quote.php:18, template-parts/content-status.php:18, template-parts/content-video.php:36, template-parts/content.php:36
 msgid "Edit"
 msgstr ""
 
@@ -163,27 +163,27 @@ msgstr ""
 msgid "Widget area three"
 msgstr ""
 
-#: template-parts/content-aside.php:43, template-parts/content-audio.php:67, template-parts/content-gallery.php:58, template-parts/content-image.php:57, template-parts/content-link.php:33, template-parts/content-page.php:22, template-parts/content-quote.php:33, template-parts/content-status.php:33, template-parts/content-video.php:67, template-parts/content.php:57
+#: template-parts/content-aside.php:43, template-parts/content-audio.php:67, template-parts/content-gallery.php:58, template-parts/content-image.php:56, template-parts/content-link.php:33, template-parts/content-page.php:16, template-parts/content-quote.php:33, template-parts/content-status.php:33, template-parts/content-video.php:67, template-parts/content.php:57
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/content-aside.php:59, template-parts/content-audio.php:82, template-parts/content-gallery.php:74, template-parts/content-image.php:71, template-parts/content-link.php:49, template-parts/content-quote.php:49, template-parts/content-status.php:49, template-parts/content-video.php:83, template-parts/content.php:73
+#: template-parts/content-aside.php:59, template-parts/content-audio.php:82, template-parts/content-gallery.php:74, template-parts/content-image.php:70, template-parts/content-link.php:49, template-parts/content-quote.php:49, template-parts/content-status.php:48, template-parts/content-video.php:83, template-parts/content.php:73
 msgid "Categories:"
 msgstr ""
 
-#: template-parts/content-aside.php:68, template-parts/content-audio.php:91, template-parts/content-gallery.php:83, template-parts/content-image.php:80, template-parts/content-link.php:58, template-parts/content-quote.php:58, template-parts/content-status.php:58, template-parts/content-video.php:92, template-parts/content.php:82
+#: template-parts/content-aside.php:68, template-parts/content-audio.php:91, template-parts/content-gallery.php:83, template-parts/content-image.php:79, template-parts/content-link.php:58, template-parts/content-quote.php:58, template-parts/content-status.php:57, template-parts/content-video.php:92, template-parts/content.php:82
 msgid "Tags:"
 msgstr ""
 
-#: template-parts/content-aside.php:78, template-parts/content-audio.php:101, template-parts/content-gallery.php:93, template-parts/content-image.php:90, template-parts/content-link.php:68, template-parts/content-quote.php:68, template-parts/content-status.php:68, template-parts/content-video.php:102, template-parts/content.php:92
+#: template-parts/content-aside.php:78, template-parts/content-audio.php:101, template-parts/content-gallery.php:93, template-parts/content-image.php:89, template-parts/content-link.php:68, template-parts/content-quote.php:68, template-parts/content-status.php:67, template-parts/content-video.php:102, template-parts/content.php:92
 msgid "Previous post"
 msgstr ""
 
-#: template-parts/content-aside.php:80, template-parts/content-audio.php:103, template-parts/content-gallery.php:95, template-parts/content-image.php:92, template-parts/content-link.php:70, template-parts/content-quote.php:70, template-parts/content-status.php:70, template-parts/content-video.php:104, template-parts/content.php:94
+#: template-parts/content-aside.php:80, template-parts/content-audio.php:103, template-parts/content-gallery.php:95, template-parts/content-image.php:91, template-parts/content-link.php:70, template-parts/content-quote.php:70, template-parts/content-status.php:69, template-parts/content-video.php:104, template-parts/content.php:94
 msgid "Previous"
 msgstr ""
 
-#: template-parts/content-aside.php:84, template-parts/content-audio.php:107, template-parts/content-gallery.php:99, template-parts/content-image.php:96, template-parts/content-link.php:74, template-parts/content-quote.php:74, template-parts/content-status.php:74, template-parts/content-video.php:108, template-parts/content.php:98
+#: template-parts/content-aside.php:84, template-parts/content-audio.php:107, template-parts/content-gallery.php:99, template-parts/content-image.php:95, template-parts/content-link.php:74, template-parts/content-quote.php:74, template-parts/content-status.php:73, template-parts/content-video.php:108, template-parts/content.php:98
 msgid "Next post"
 msgstr ""
 

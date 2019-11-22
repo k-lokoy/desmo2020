@@ -8,7 +8,6 @@
  */
 ?>
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
   <?php if ( !is_singular() ) : ?>
     <header class="entry-header">  
       <?php
