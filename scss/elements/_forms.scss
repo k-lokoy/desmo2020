@@ -6,7 +6,6 @@ select {
   padding: .3em .5em;
   padding: .15em .25em;
   max-width: calc(100% - 1em);
-  border-radius: 0.15em;
 }
 
 input,
@@ -41,7 +40,7 @@ button,
   background-color: var(--color-anchor);
   color: var(--color-txt-2);
   border: 0;
-  border-radius: 0.15em;
+  border-radius: var(--border-radius);
   padding: .15em .25em;
   text-transform: uppercase;
   text-decoration: none;

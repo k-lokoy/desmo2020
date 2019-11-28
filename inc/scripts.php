@@ -4,7 +4,7 @@
  *
  * @package desmo2020
  * @since   1.0.0
- * @version 1.0.0
+ * @version 1.2.0
  */
 function desmo2020_scripts() {
 
@@ -14,7 +14,7 @@ function desmo2020_scripts() {
   // Fonts from google
   wp_enqueue_style(
     "desmo2020-fonts", 
-    "https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i",
+    "https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i,700",
     array(),
     null
   );
@@ -41,7 +41,7 @@ function desmo2020_scripts() {
     get_theme_mod( "color_bg_2",   "#222222" ),
     get_theme_mod( "color_text",   "#222222" ),
     get_theme_mod( "color_text_2", "#F4EDE7" ),
-    get_theme_mod( "color_anchor", "#0DAD7A" ),
+    get_theme_mod( "color_anchor", "#A87D34" ),
     get_theme_mod( "color_border", "#222222" ),
   ];
 

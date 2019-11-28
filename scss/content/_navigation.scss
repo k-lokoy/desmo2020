@@ -1,6 +1,5 @@
 .page-links {
   font-size: .8rem;
-  font-weight: 500;
 
   span,
   a {
@@ -10,8 +9,8 @@
   .current {
     background-color: var(--color-bg-2);
     color: var(--color-txt-2);
-    border-radius: 0.15em;
     padding: .15em .25em;
+    border-radius: var(--border-radius);
   }
 }
 
@@ -29,8 +28,8 @@
   a,
   span:not(.dots) {
     background-color: var(--color-anchor);
-    border-radius: 0.15em;
     padding: .3em .5em;
+    border-radius: var(--border-radius);
     color: var(--color-txt-2);
   }
 
@@ -65,7 +64,7 @@
     span:nth-child(2) {
       text-transform: uppercase;
       font-size: .8rem;
-      font-weight: 500;
+      font-weight: var(--font-weight-bold);
     }
 
     span:nth-child(3) {

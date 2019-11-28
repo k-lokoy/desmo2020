@@ -27,14 +27,13 @@
 body.archive .format-aside {
   background-color: #FFF9C0;
   padding: calc(var(--spacing) * 0.5);
-  border-radius: 0.625em;
 }
 
 /* Post format: Status */
 body.archive .format-status {
   article {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
   }
 }
 
@@ -42,7 +41,7 @@ body.archive .format-status {
 body.archive .format-link {
   article {
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
   }
 }
 
@@ -50,7 +49,7 @@ body.archive .format-link {
 .format-quote {
   article {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
   }
 
   blockquote {

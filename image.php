@@ -4,7 +4,7 @@
  *
  * @package desmo2020
  * @since   1.1.0
- * @version 1.1.0
+ * @version 1.2.0
  */
 ?>
 
@@ -18,6 +18,8 @@
     the_post();
 
     get_template_part( "template-parts/content", "image" );
+
+    if ( comments_open() || get_comments_number() ) comments_template();
 
   }
   ?>

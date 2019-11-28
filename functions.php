@@ -5,14 +5,13 @@
  * @package desmo2020
  */
 
-
 if ( !function_exists( "desmo2020_setup" ) ) {
 
   /**
    * Set up theme defaults and registers support for various WordPress features
    *
    * @since   1.0.0
-   * @version 1.0.0
+   * @version 1.2.0
    */
   function desmo2020_setup() {
 
@@ -90,8 +89,9 @@ if ( !function_exists( "desmo2020_setup" ) ) {
     add_editor_style( "editor-style.css" );
 
     //https://developer.wordpress.org/reference/functions/add_image_size/
-    add_image_size( "desmo2020-featured-image", 1140, 642, false );
-    add_image_size( "desmo2020-full-width",     1140 );
+    add_image_size( "desmo2020-featured_image_full", 1920, 1080, true  );
+    add_image_size( "desmo2020-featured_image",      1140,  400, true  );
+    add_image_size( "desmo2020-full_width",          1140,  640, false );
 
     // Navigation
     register_nav_menus( array (
@@ -112,6 +112,9 @@ require_once get_template_directory() . "/inc/widget-areas.php";
 
 // Filters
 require_once get_template_directory() . "/inc/filters.php";
+
+// Theme specific funtions
+require_once get_template_directory() . "/inc/theme-functions.php";
 
 // WP Customizer settings
 require_once get_template_directory() . "/inc/customizer.php";

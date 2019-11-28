@@ -42,6 +42,20 @@ License: Ubuntu Font License
 
 # Changelog
 
+# TODO
+- Improve block styles
+- Add customized styles to editor styles
+
+1.2.0 - 2019-11-28
+- Added social media icons to top-bar
+- Restyled image and gallery captions
+- Changed default anchor color
+- Changed root font size
+- Improved editor styles
+- Fixed featured image sizes
+- Fixed content not showing on archive pages with excerpts
+- Fixed image/attachment pages
+
 1.1.1 - 2019-11-22
 - Fixed post thumbnails showing up twice on some posts and pages
 

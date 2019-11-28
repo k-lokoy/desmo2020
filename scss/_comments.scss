@@ -7,7 +7,7 @@
 .comments-title {
   margin: 0;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
 }
 
 .comment-navigation {
@@ -83,5 +83,5 @@
 .comment-reply-title {
   margin: 0;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
 }

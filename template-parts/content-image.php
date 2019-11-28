@@ -4,7 +4,7 @@
  *
  * @package desmo2020
  * @since   1.1.0
- * @version 1.1.0
+ * @version 1.2.0
  */
 ?>
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -44,14 +44,16 @@
 
   <article>
     <?php
-    if ( is_attachment() ) {
-      echo wp_get_attachment_image( get_the_ID() ); 
-    } else {
-      the_content();      
-    }
+    $image_size = apply_filters( "desmo2020", "full_width" );
+
+    echo wp_get_attachment_image( get_the_ID(), $image_size );
     ?>
 
+    <p><?php the_excerpt(); ?></p>
+
     <?php
+    the_content();      
+
     wp_link_pages( array (
       "before"      => "<div class=\"page-links\">" . __( "Pages:", "desmo2020" ),
       "after"       => "</div>",
@@ -59,6 +61,7 @@
       "link_after"  => "</span>",
     ) );
     ?>
+
   </article>
 
   <?php if ( is_single() ) : ?>
@@ -82,20 +85,25 @@
       <?php endif; ?>
       
       <?php
-      if ( is_single() ) {
+      if ( is_attachment() ) { 
+        the_post_navigation(
+          array(
+            'prev_text' => 
+              '<span class="screen-reader-text">' .  __( 'Posted in', 'desmo2020' ) . 
+              '</span><span>'                     .  __( 'Posted in', 'desmo2020' ) . 
+              '</span><span>%title</span>'
+          )
+        );
+      } else if( is_single() ) {
         the_post_navigation( array(
           'prev_text' => 
-            '<span class="screen-reader-text">' . 
-            __( 'Previous post', 'desmo2020' )  . '</span>
-             <span>' . 
-             __( 'Previous', 'desmo2020' ) . 
+            '<span class="screen-reader-text">' . __( 'Previous post', 'desmo2020' ) . 
+            '</span><span>'                     . __( 'Previous',      'desmo2020' ) . 
              '</span><span>%title</span>',
           'next_text' => 
-            '<span class="screen-reader-text">' . 
-            __( 'Next post', 'desmo2020' ) . 
-            '</span><span>' . 
-            __( 'Next', 'desmo2020' ) . '</span>
-            <span>%title</span>',
+            '<span class="screen-reader-text">' . __( 'Next post', 'desmo2020' ) . 
+            '</span><span>'                     . __( 'Next',      'desmo2020' ) . 
+            '</span><span>%title</span>',
         ) );
       }
       ?>

@@ -4,7 +4,7 @@
  *
  * @package desmo2020
  * @since   1.0.0
- * @version 1.0.0
+ * @version 1.2.0
  */
 
 function desmo2020_customize_register( $wp_customize ) {
@@ -44,7 +44,7 @@ function desmo2020_customize_register( $wp_customize ) {
 
   // Link color
   $wp_customize->add_setting( "color_anchor", array (
-    "default"           => "#0DAD7A",
+    "default"           => "#A87D34",
     "sanitize_callback" => "sanitize_hex_color"
   ) );
 
@@ -93,6 +93,32 @@ function desmo2020_customize_register( $wp_customize ) {
     "section"   => "top_bar",
     "type"      => "text",
   ) );
+
+  // RSS link
+  $wp_customize->add_setting( 'social_media_rss', array(
+    'default'           => false,
+    'sanitize_callback' => 'desmo2020_sanitize_checkbox'
+  ) );
+  $wp_customize->add_control( 'social_media_rss', array(
+    'label'     => __('RSS Link', 'desmo2020'),
+    'section'   => 'top_bar',
+    'type'      => 'checkbox',
+  ) );
+
+  // Social icons
+  global $desmo2020_social_icons;
+  
+  foreach( $desmo2020_social_icons as $service => $icon){
+    $wp_customize->add_setting( 'social_media_' . strtolower($service), array(
+      'default'           => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    ) );
+    $wp_customize->add_control( 'social_media_' . strtolower($service), array(
+      'label'     => $service . ' URL',
+      'section'   => 'top_bar',
+      'type'      => 'text',
+    ) );
+  }
 
   // Footer 
   $wp_customize->add_section( "footer" , array (

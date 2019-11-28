@@ -12,10 +12,15 @@
   margin-left: 0;
 }
 
+.wp-block-button {
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+
 .wp-block-button__link {
   background-color: var(--color-anchor);
   color: var(--color-txt-2);
-  border-radius: 0.625em;
+  border-radius: var(--border-radius);
   transition: all .3s ease-in-out;
 
   &:hover {

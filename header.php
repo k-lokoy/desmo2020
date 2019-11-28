@@ -5,7 +5,7 @@
  *
  * @package desmo2020
  * @since   1.0.0
- * @version 1.1.0
+ * @version 1.2.0
  */
 ?>
 <!DOCTYPE html>
@@ -56,6 +56,8 @@
             </a>
           </div>
         <?php endif; ?>
+
+        <?php desmo2020_social_links(); ?>
       </div><!-- .top-bar-links -->
 
     </header><!-- .top-bar -->
@@ -103,7 +105,7 @@
 
         <?php
         if ( is_singular() && get_the_post_thumbnail() !== "" ) {
-          the_post_thumbnail( "desmo2020-featured-image" );
+          the_post_thumbnail( "desmo2020-featured_image_full" );
         }
         ?>
     

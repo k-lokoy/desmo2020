@@ -7,7 +7,6 @@ body {
   color: var(--color-text);
   font-family: var(--font-family);
   word-wrap: break-word;
-  font-smooth: always;
 }
 
 /* Headings */
@@ -18,7 +17,7 @@ h4,
 h5,
 h6 {
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: var(--font-weight-bold);
 }
 
 h1 { font-size: calc(var(--font-size) * 2.5); }
@@ -139,7 +138,6 @@ pre {
 @media only screen and (max-width: $tablet) {
   table {
     display: inline-block;
-    overflow: hidden;
-    overflow-x: auto;
+    overflow: auto;
   }
 }

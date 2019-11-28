@@ -4,7 +4,7 @@
  *
  * @package desmo2020
  * @since   1.1.0
- * @version 1.1.0
+ * @version 1.2.0
  */
 ?>
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -44,7 +44,7 @@
 
   <?php if ( !is_singular() && get_the_post_thumbnail() !== "" ): ?>
     <a class="post-thumbnail" href="<?php the_permalink() ?>">
-      <?php the_post_thumbnail( "desmo2020-featured-image" ); ?>
+      <?php the_post_thumbnail( "desmo2020-featured_image" ); ?>
     </a><!-- .post-thumbnail -->
   <?php endif; ?>
 
