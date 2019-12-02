@@ -45,6 +45,14 @@ License: Ubuntu Font License
 # TODO
 - Improve block styles
 - Add customized styles to editor styles
+- Add footer menu
+- Advertise theme author in footer
+
+1.2.1 - 2019-12-02
+- Fixed responsiveness of header menu
+- Fixed home screen scrolling on mobile layout
+- Changed caption styles
+- Improved gallery layout
 
 1.2.0 - 2019-11-28
 - Added social media icons to top-bar

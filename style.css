@@ -6,7 +6,7 @@
   Author URI: http://lokoydesign.github.io/
   Description: Custom theme for brilliant-pearl.com
   Requires at least: WordPress 5.0.0
-  Version: 1.2.0
+  Version: 1.2.1
   License: GNU General Public License v3 or later
   License URI: http://www.gnu.org/licenses/gpl-3.0.html  
   Tags: one-column, two-columns, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, full-width-template, post-formats, theme-options, threaded-comments, translation-ready, blog
@@ -869,7 +869,7 @@ body.has-featured-image .top-bar {
   z-index: 10;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 420px) {
   .top-bar-languages img {
     width: auto;
   }
@@ -927,6 +927,11 @@ body.has-featured-image .top-bar {
   bottom: -9px;
 }
 
+#site-header-nav-toggle:checked ~ #site-header-nav-toggle-label {
+  position: absolute;
+  top: var(--spacing);
+}
+
 #site-header-nav-toggle:checked ~ #site-header-nav-toggle-label span {
   left: 30px;
 }
@@ -959,8 +964,8 @@ body.has-featured-image .top-bar {
   grid-template-columns: minmax(0, 100%);
   grid-gap: .5em;
   margin: 0;
-  padding: -webkit-calc(30px + 3em) var(--spacing) var(--spacing);
-  padding: calc(30px + 3em) var(--spacing) var(--spacing);
+  padding: -webkit-calc(30px + var(--spacing) * 2) var(--spacing);
+  padding: calc(30px + var(--spacing) * 2) var(--spacing);
   text-transform: uppercase;
   font-size: 1.5rem;
   width: -webkit-calc(100% - var(--spacing) * 2);
@@ -1136,7 +1141,7 @@ body.home main {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   max-width: 100%;
   margin: 0;
@@ -1364,17 +1369,14 @@ object {
 
 .wp-caption-text {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #FFFFFF;
   left: 0;
-  bottom: 0.5em;
+  bottom: 0;
   font-size: 0.8rem;
-  padding: 0.5em;
-  max-width: 80%;
-  -webkit-border-top-right-radius: var(--border-radius);
-          border-top-right-radius: var(--border-radius);
-  -webkit-border-bottom-right-radius: var(--border-radius);
-          border-bottom-right-radius: var(--border-radius);
+  padding: 1em;
+  width: -webkit-calc(100% - 2em);
+  width: calc(100% - 2em);
 }
 
 figure {
@@ -1383,49 +1385,55 @@ figure {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   grid-gap: var(--spacing);
   justify-items: start;
-}
-
-.gallery-columns-1 {
-  grid-template-columns: minmax(0, 1fr);
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .gallery-item {
   margin: 0;
 }
 
-@media (min-width: 768px) {
-  .gallery-columns-1 {
-    grid-template-columns: minmax(0, 1fr);
+@media (min-width: 420px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, auto));
   }
+  .gallery-columns-1 {
+    grid-template-columns: minmax(0, 100%);
+  }
+}
+
+@media (min-width: 768px) {
   .gallery-columns-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, auto));
   }
   .gallery-columns-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, auto));
   }
   .gallery-columns-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, auto));
   }
   .gallery-columns-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, auto));
   }
   .gallery-columns-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, auto));
   }
   .gallery-columns-7 {
-    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-columns: repeat(7, minmax(0, auto));
   }
   .gallery-columns-8 {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-columns: repeat(8, minmax(0, auto));
   }
   .gallery-columns-9 {
-    grid-template-columns: repeat(9, minmax(0, 1fr));
+    grid-template-columns: repeat(9, minmax(0, auto));
   }
   .gallery-columns-10 {
-    grid-template-columns: repeat(10, minmax(0, 1fr));
+    grid-template-columns: repeat(10, minmax(0, auto));
   }
 }
 

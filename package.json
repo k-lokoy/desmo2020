@@ -1,6 +1,6 @@
 {
   "name": "desmo2020",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Custom WordPress theme for Brilliant-Pearl",
   "main": "index.js",
   "scripts": {
