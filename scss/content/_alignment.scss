@@ -1,27 +1,54 @@
-.alignnone,
-.aligncenter,
-.alignleft,
-.alignright,
+.aligncenter {
+  display: block;
+  clear: both;
+  margin: 0 auto var(--spacing);
+}
+
+.alignleft {
+  float: left;
+  margin: 0 var(--spacing) var(--spacing) 0;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 var(--spacing) var(--spacing);
+  margin-right: 0;
+}
+
+article {
+  overflow: visible;
+}
+
 .alignwide {
-  margin-top: var(--spacing);
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--spacing);
+}
+
+.alignfull {
+  margin-left: calc(50% - 50vw);
+  max-width: calc(100vw - 9px);
+  width: calc(100vw - 9px);
   margin-bottom: var(--spacing);
 }
 
 
-.alignright { 
-  float: right; 
-  margin: 0 0 1em 1em;
+@media (min-width: ($desktop + $spacingWide * 4)) {
+  .alignwide {
+    width: calc(100% + var(--spacing) * 2);
+    max-width: calc(100% + var(--spacing) * 2);
+    margin-left: calc(var(--spacing) * -1)
+  }
 }
 
-.alignleft { 
-  float: left; 
-  margin: 0 1em 1em 0;
-}
-
-.aligncenter { 
-  display: block;
-  margin-left: auto; 
-  margin-right: auto;
+@media (min-width: ($mobile + $spacingWide * 2)) {
+  .alignfull {
+    margin-left: calc(50% - 50vw + 8.5px);
+    max-width: calc(100vw - 17px);
+    width: calc(100vw - 17px);
+  }
 }
 
 /* Clear floats */

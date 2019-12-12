@@ -56,10 +56,10 @@ function distribute() {
 }
 
 function watch(done) {
-  gulp.watch("scss/**/*.scss", {cwd: "./"}, gulp.series(css))
-  gulp.watch("**/*.php",       {cwd: "./"}, gulp.series(pot))
+  gulp.watch("scss/**/*.scss", {cwd: "./", usePolling: true}, css)
+  gulp.watch("**/*.php",       {cwd: "./", usePolling: true}, pot)
 
-  done()
+  return done()
 }
 
 module.exports.css        = css

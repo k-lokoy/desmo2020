@@ -1,0 +1,66 @@
+/*
+  Specific styles for the Gutenberg block editor
+*/
+
+/* Variables */
+@import "variables";
+
+.editor-post-title__block .editor-post-title__input {
+  font-family: var(--font-family);
+  font-size: calc(var(--font-size) * 2.5);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
+.wp-block-freeform.block-library-rich-text__tinymce a,
+.wp-block-file__content-wrapper {
+  color: var(--color-scheme);
+}
+
+.wp-block-image img,
+.wp-block-image .components-resizable-box__container img {
+  display: inline-block;
+}
+
+.editor-styles-wrapper .wp-caption-text, 
+.editor-styles-wrapper .wp-block-image figcaption, 
+.editor-styles-wrapper .blocks-gallery-grid .blocks-gallery-image figcaption, 
+.editor-styles-wrapper .blocks-gallery-grid .blocks-gallery-item figcaption, 
+.editor-styles-wrapper .wp-block-gallery .blocks-gallery-image figcaption, 
+.editor-styles-wrapper .wp-block-gallery .blocks-gallery-item figcaption {
+  width: 100% !important;
+}
+
+.blocks-gallery-item .block-editor-rich-text {
+  z-index: 100;
+}
+
+.editor-styles-wrapper .blocks-gallery-grid {
+  margin: 0;
+}
+
+.wp-block {
+  max-width: $desktop;
+}
+
+.wp-block [data-type="core/gallery"]{
+  max-width: 100%;
+}
+
+.wp-block-button,
+.wp-block-button__link {
+  line-height: 1.2rem;
+}
+
+.editor-styles-wrapper [data-block] {
+  margin-top: 0;
+  margin-bottom: var(--spacing);
+}
+
+.editor-styles-wrapper .wp-caption-text,
+.editor-styles-wrapper .blocks-gallery-grid .blocks-gallery-image figcaption,
+.editor-styles-wrapper .blocks-gallery-grid .blocks-gallery-item figcaption,
+.editor-styles-wrapper .wp-block-gallery .blocks-gallery-image figcaption,
+.editor-styles-wrapper .wp-block-gallery .blocks-gallery-item figcaption {
+  position: relative !important;
+}

@@ -34,21 +34,31 @@ object {
 }
 
 .wp-caption,
-.gallery-item {
+.gallery-item,
+.wp-block-image,
+.wp-block-image figure,
+.blocks-gallery-image,
+.blocks-gallery-item {
   position: relative;
-  overflow: hidden;
   border-radius: var(--border-radius);
 }
 
-.wp-caption-text {
-  position: absolute;
+.wp-caption-text,
+.wp-block-image figcaption,
+.blocks-gallery-grid .blocks-gallery-image figcaption,
+.blocks-gallery-grid .blocks-gallery-item figcaption,
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
   background-color: rgba(0, 0, 0, 0.6);
   color: #FFFFFF;
+  position: absolute;
   left: 0;
   bottom: 0;
-  font-size: 0.8rem;
   padding: 1em;
   width: calc(100% - 2em);
+  font-size: 0.8rem;
+  line-height: 1rem;
+  margin: 0;
 }
 
 figure {

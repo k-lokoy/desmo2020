@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desmo2020\n"
 "Report-Msgid-Bugs-To: https://github.com/lokoydesign/desmo2020/issues\n"
-"POT-Creation-Date: 2019-11-28 21:48+0100\n"
+"POT-Creation-Date: 2019-12-12 13:23+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Lokøy Design <kennethlokoy@gmail.com>\n"
@@ -116,8 +116,8 @@ msgid "Secondary text color"
 msgstr "Sekundær tekstfarge"
 
 #: inc/customizer.php:52
-msgid "Links"
-msgstr "Lenker"
+msgid "Scheme"
+msgstr "Tema"
 
 #: inc/customizer.php:63
 msgid "Borders"
@@ -246,3 +246,6 @@ msgid ""
 "searching can help."
 msgstr ""
 "Ingenting ble funnet. Bruk søkefeltet eller menyen for å finne innholdet."
+
+#~ msgid "Links"
+#~ msgstr "Lenker"

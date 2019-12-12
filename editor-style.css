@@ -10,6 +10,7 @@
   # Content
     ## Media
     ## Alignment
+    ## Blocks
 */
 /* Font */
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i,700");
@@ -19,7 +20,7 @@
   --color-bg-2:   #222222;
   --color-txt:    #222222;
   --color-txt-2:  #F4EDE7;
-  --color-anchor: #A87D34;
+  --color-scheme: #A87D34;
   --color-border: #222222;
   --color-tint:   #6B543E;
   --font-family: 'Ubuntu', sans-serif;
@@ -153,8 +154,8 @@ h6 {
 
 /* Paragraphs */
 p {
-  line-height: 1.5em;
-  margin: 0 0 1.5em;
+  line-height: 1.8em;
+  margin: 0 0 var(--spacing);
 }
 
 /* Blockquotes */
@@ -178,10 +179,18 @@ table {
   border-width: 0.0625em 0 0 0.0625em;
   max-width: 100%;
   margin-bottom: 1.5em;
+  word-break: normal;
+}
+
+.wp-block-table.is-style-stripes td,
+.wp-block-table.is-style-stripes th {
+  border-color: var(--border-color);
 }
 
 td,
-th {
+th,
+.wp-block-table td,
+.wp-block-table th {
   border-width: 0 0.0625em 0.0625em 0;
   text-align: left;
   padding: .5em;
@@ -207,6 +216,10 @@ ol {
   padding: 0;
 }
 
+li {
+  line-height: 1.8em;
+}
+
 /* Address */
 address {
   font-style: italic;
@@ -214,7 +227,7 @@ address {
 
 /* Anchor */
 a {
-  color: var(--color-anchor);
+  color: var(--color-scheme);
   text-decoration: none;
   -webkit-transition: .3s ease-in-out;
   -o-transition: .3s ease-in-out;
@@ -238,11 +251,24 @@ cite {
 
 /* Code tag */
 /* Horisontal rule tag */
-hr {
+hr,
+.wp-block-separator {
   width: 100%;
   border: none;
-  height: 0.0625em;
+  margin: var(--spacing) auto;
   background-color: var(--color-border);
+}
+
+hr:not(.is-style-dots),
+.wp-block-separatoz:not(.is-style-dots) {
+  height: 0.125em;
+  margin: var(--spacing) 0;
+  text-align: left;
+}
+
+hr.is-style-dots:before,
+.wp-block-separator.is-style-dots:before {
+  font-size: 1.5rem;
 }
 
 /* Insert tag */
@@ -310,23 +336,33 @@ object {
 }
 
 .wp-caption,
-.gallery-item {
+.gallery-item,
+.wp-block-image,
+.wp-block-image figure,
+.blocks-gallery-image,
+.blocks-gallery-item {
   position: relative;
-  overflow: hidden;
   -webkit-border-radius: var(--border-radius);
           border-radius: var(--border-radius);
 }
 
-.wp-caption-text {
-  position: absolute;
+.wp-caption-text,
+.wp-block-image figcaption,
+.blocks-gallery-grid .blocks-gallery-image figcaption,
+.blocks-gallery-grid .blocks-gallery-item figcaption,
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
   background-color: rgba(0, 0, 0, 0.6);
   color: #FFFFFF;
+  position: absolute;
   left: 0;
   bottom: 0;
-  font-size: 0.8rem;
   padding: 1em;
   width: -webkit-calc(100% - 2em);
   width: calc(100% - 2em);
+  font-size: 0.8rem;
+  line-height: 1rem;
+  margin: 0;
 }
 
 figure {
@@ -424,29 +460,65 @@ figure {
 }
 
 /* Content: Alignment */
-.alignnone,
-.aligncenter,
-.alignleft,
-.alignright,
-.alignwide {
-  margin-top: var(--spacing);
-  margin-bottom: var(--spacing);
-}
-
-.alignright {
-  float: right;
-  margin: 0 0 1em 1em;
+.aligncenter {
+  display: block;
+  clear: both;
+  margin: 0 auto var(--spacing);
 }
 
 .alignleft {
   float: left;
-  margin: 0 1em 1em 0;
+  margin: 0 var(--spacing) var(--spacing) 0;
 }
 
-.aligncenter {
-  display: block;
+.alignright {
+  float: right;
+  margin: 0 0 var(--spacing) var(--spacing);
+  margin-right: 0;
+}
+
+article {
+  overflow: visible;
+}
+
+.alignwide {
+  width: 100%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: var(--spacing);
+}
+
+.alignfull {
+  margin-left: -webkit-calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  max-width: -webkit-calc(100vw - 9px);
+  max-width: calc(100vw - 9px);
+  width: -webkit-calc(100vw - 9px);
+  width: calc(100vw - 9px);
+  margin-bottom: var(--spacing);
+}
+
+@media (min-width: 1220px) {
+  .alignwide {
+    width: -webkit-calc(100% + var(--spacing) * 2);
+    width: calc(100% + var(--spacing) * 2);
+    max-width: -webkit-calc(100% + var(--spacing) * 2);
+    max-width: calc(100% + var(--spacing) * 2);
+    margin-left: -webkit-calc(var(--spacing) * -1);
+    margin-left: calc(var(--spacing) * -1);
+  }
+}
+
+@media (min-width: 460px) {
+  .alignfull {
+    margin-left: -webkit-calc(50% - 50vw + 8.5px);
+    margin-left: calc(50% - 50vw + 8.5px);
+    max-width: -webkit-calc(100vw - 17px);
+    max-width: calc(100vw - 17px);
+    width: -webkit-calc(100vw - 17px);
+    width: calc(100vw - 17px);
+  }
 }
 
 /* Clear floats */
@@ -461,4 +533,70 @@ article::after {
   padding-top: -webkit-calc(var(--spacing) * 2);
   padding-top: calc(var(--spacing) * 2);
   clear: both;
+}
+
+.alignfull {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Content: Blocks */
+.wp-block-embed__wrapper,
+.wp-block-gallery {
+  overflow-x: auto;
+}
+
+.wp-block-cover,
+.wp-block-cover-text {
+  color: var(--color-txt-2);
+}
+
+.wp-block-button {
+  margin-bottom: var(--spacing);
+}
+
+.wp-block-button__link,
+.wp-block-file .wp-block-file__button {
+  background-color: var(--color-scheme);
+  color: var(--color-txt-2);
+  -webkit-border-radius: var(--border-radius);
+          border-radius: var(--border-radius);
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.wp-block-button__link:hover,
+.wp-block-file .wp-block-file__button:hover {
+  background-color: var(--color-bg-2);
+}
+
+.is-style-outline .wp-block-button__link {
+  background-color: transparent;
+  border-color: var(--color-scheme);
+  color: var(--color-scheme);
+}
+
+.is-style-outline .wp-block-button__link:hover {
+  background-color: transparent;
+  border-color: var(--color-bg-2);
+  color: var(--color-bg-2);
+}
+
+.wp-block-pullquote blockquote {
+  border: 0;
+}
+
+.wp-block-pullquote.is-style-solid-color {
+  -webkit-border-radius: var(--border-radius);
+          border-radius: var(--border-radius);
+}
+
+.wp-block-file .wp-block-file__button,
+.wp-block-file .wp-block-file__button-richtext-wrapper {
+  display: table;
+  margin: -webkit-calc(var(--spacing) * 0.5) 0 var(--spacing);
+  margin: calc(var(--spacing) * 0.5) 0 var(--spacing);
+  font-size: 1.2rem;
 }

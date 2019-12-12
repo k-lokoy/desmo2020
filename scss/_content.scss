@@ -2,7 +2,7 @@ main,
 main > section {
   display: grid;
   grid-template-columns: minmax(0, 100%);
-  grid-gap: var(--spacing);
+  grid-gap: calc(var(--spacing) * 2);
   align-items: start;
 }
 

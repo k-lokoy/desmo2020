@@ -1,13 +1,12 @@
 .entry-footer {
   display: grid;
   grid-template-columns: minmax(0, 100%);
-  grid-gap: var(--spacing);
+  grid-gap: calc(var(--spacing) * 2);
 }
 
 .post-categories,
 .post-tags {
   span:first-child {
-    font-size: .8rem;
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
   }  
@@ -20,8 +19,6 @@
 .post-tags {
   display: flex;
   flex-wrap: wrap;
-  font-size: .8rem;
-
 
   > * {
     margin: 0 calc(var(--spacing) * 0.25) calc(var(--spacing) * 0.25) 0;

@@ -1,5 +1,5 @@
 .page-links {
-  font-size: .8rem;
+  font-size: 1rem;
 
   span,
   a {
@@ -9,7 +9,7 @@
   .current {
     background-color: var(--color-bg-2);
     color: var(--color-txt-2);
-    padding: .15em .25em;
+    padding: .25em .50em;
     border-radius: var(--border-radius);
   }
 }
@@ -27,7 +27,7 @@
 
   a,
   span:not(.dots) {
-    background-color: var(--color-anchor);
+    background-color: var(--color-scheme);
     padding: .3em .5em;
     border-radius: var(--border-radius);
     color: var(--color-txt-2);
@@ -68,7 +68,7 @@
     }
 
     span:nth-child(3) {
-      color: var(--color-anchor);
+      color: var(--color-scheme);
     }
   }
 }

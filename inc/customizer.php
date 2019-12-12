@@ -42,14 +42,14 @@ function desmo2020_customize_register( $wp_customize ) {
     "section" => "colors",
   ) ) );
 
-  // Link color
-  $wp_customize->add_setting( "color_anchor", array (
+  // Color scheme
+  $wp_customize->add_setting( "color_scheme", array (
     "default"           => "#A87D34",
     "sanitize_callback" => "sanitize_hex_color"
   ) );
 
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, "color_anchor", array (
-    "label"   => __( "Links", "desmo2020" ),
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, "color_scheme", array (
+    "label"   => __( "Scheme", "desmo2020" ),
     "section" => "colors",
   ) ) );
 

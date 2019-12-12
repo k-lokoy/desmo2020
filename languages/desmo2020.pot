@@ -104,7 +104,7 @@ msgid "Secondary text color"
 msgstr ""
 
 #: inc/customizer.php:52
-msgid "Links"
+msgid "Scheme"
 msgstr ""
 
 #: inc/customizer.php:63

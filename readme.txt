@@ -43,10 +43,18 @@ License: Ubuntu Font License
 # Changelog
 
 # TODO
-- Improve block styles
 - Add customized styles to editor styles
 - Add footer menu
 - Advertise theme author in footer
+
+1.2.2 - 2019-12-12
+- Changed anchor color setting to color scheme setting
+- Added version parameter to stylesheet
+- Improved various styles
+- Improved editor styles
+- Fixed alignments
+- Fixed block styles
+- Updated translations
 
 1.2.1 - 2019-12-02
 - Fixed responsiveness of header menu

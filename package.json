@@ -1,10 +1,10 @@
 {
   "name": "desmo2020",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Custom WordPress theme for Brilliant-Pearl",
   "main": "index.js",
   "scripts": {
-    "dev": "npx gulp watch",
+    "dev": "npx gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +18,7 @@
     "url": "https://github.com/lokoydesign/desmo2020/issues"
   },
   "homepage": "https://github.com/lokoydesign/desmo2020#readme",
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
     "@babel/register": "^7.7.0",

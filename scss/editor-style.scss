@@ -10,6 +10,7 @@
   # Content
     ## Media
     ## Alignment
+    ## Blocks
 */
 
 /* Font */
@@ -30,18 +31,16 @@
   }
 }
 
-.wp-caption,
-.gallery-item {
-  dd {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #FFFFFF;
-    left: 0;
-    bottom: 0;
-    font-size: 0.8rem;
-    padding: 1em;
-    width: calc(100% - 2em);
-  }
+.wp-caption dd,
+.gallery-item dd {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+  left: 0;
+  bottom: 0;
+  font-size: 0.8rem;
+  padding: 1em;
+  width: calc(100% - 2em);
 }
 
 .gallery .gallery-item {
@@ -67,3 +66,12 @@
 
 /* Content: Alignment */
 @import "content/alignment";
+
+.alignfull {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Content: Blocks */
+@import "content/blocks";
