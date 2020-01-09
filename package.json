@@ -1,6 +1,6 @@
 {
   "name": "desmo2020",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Custom WordPress theme for Brilliant-Pearl",
   "main": "index.js",
   "scripts": {
@@ -12,10 +12,35 @@
     "url": "git+https://github.com/lokoydesign/desmo2020.git"
   },
   "keywords": [],
-  "author": "Lokøy Design",
+  "author": "Lokøy Design <kennethlokoy@gmail.com>",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/lokoydesign/desmo2020/issues"
+  },
+  "wordpress": {
+    "themeURI": "https://github.com/lokoydesign/desmo2020",
+    "authorURI": "http://lokoydesign.github.io/",
+    "requires": "WordPress 5.0.0",
+    "licenseFull": "GNU General Public License v3 or later",
+    "licenseURI": "http://www.gnu.org/licenses/gpl-3.0.html",
+    "textDomain": "desmo2020",
+    "copyrightYear": "2019-2020",
+    "tags": [
+      "one-column",
+      "flexible-header",
+      "custom-background",
+      "custom-colors",
+      "custom-header",
+      "custom-menu",
+      "custom-logo",
+      "editor-style",
+      "featured-images",
+      "post-formats",
+      "theme-options",
+      "threaded-comments",
+      "translation-ready",
+      "blog"
+    ]
   },
   "homepage": "https://github.com/lokoydesign/desmo2020#readme",
   "dependencies": {
@@ -28,6 +53,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sort": "^2.0.0",
     "gulp-wp-pot": "^2.3.5",
-    "gulp-zip": "^5.0.1"
+    "gulp-zip": "^5.0.1",
+    "gulp-sass-variables": "^1.2.0"
   }
 }

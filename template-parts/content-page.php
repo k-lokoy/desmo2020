@@ -3,8 +3,8 @@
  * Template for displaying page content
  *
  * @package desmo2020
- * @since   1.1.0
- * @version 1.1.0
+ * @since   1.0.0
+ * @version 1.1.0 [Improved content layouts]
  */
 ?>
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -13,10 +13,10 @@
 
     <?php
     wp_link_pages( array (
-      "before"      => "<div class=\"page-links\">" . __( "Pages:", "desmo2020" ),
-      "after"       => "</div>",
-      "link_before" => "<span class=\"page-number\">",
-      "link_after"  => "</span>",
+      'before'      => '<div class="page-links">' . __( 'Pages:', 'desmo2020' ),
+      'after'       => '</div>',
+      'link_before' => '<span class="page-number">',
+      'link_after'  => '</span>',
     ) );
     ?>
   </article>

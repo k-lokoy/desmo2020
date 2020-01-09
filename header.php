@@ -5,7 +5,8 @@
  *
  * @package desmo2020
  * @since   1.0.0
- * @version 1.2.0
+ * @version 1.1.0 [Improved content layouts]
+ * @version 1.2.0 [Fixed featured image sizes]
  */
 ?>
 <!DOCTYPE html>
@@ -31,28 +32,30 @@
       
       <ul class="top-bar-languages">
         <?php
-        pll_the_languages( array ( 
-          "show_flags" => true,
-          "show_names" => false
-        ) );
+        if ( function_exists( 'pll_the_languages' ) ) {
+          pll_the_languages( array ( 
+            'show_flags' => true,
+            'show_names' => false
+          ) );
+        }
         ?>
       </ul><!-- .top-bar-languages -->
 
       <div class="top-bar-links">
-        <?php if ( get_theme_mod( "phone" ) ): ?>
+        <?php if ( get_theme_mod( 'phone' ) ): ?>
           <div class="desmo2020-phone">
             <i class="fas fa-phone-alt"></i>
-            <a href="tel:<?php echo esc_attr( get_theme_mod( "phone" ) ); ?>">
-              <?php echo esc_html( get_theme_mod( "phone" ) ); ?>
+            <a href="tel:<?php echo esc_attr( get_theme_mod( 'phone' ) ); ?>">
+              <?php echo esc_html( get_theme_mod( 'phone' ) ); ?>
             </a>
           </div>
         <?php endif; ?>
 
-        <?php if ( get_theme_mod( "email" ) ) : ?>
+        <?php if ( get_theme_mod( 'email' ) ) : ?>
           <div class="desmo2020-email">
             <i class="fas fa-envelope"></i>
-            <a href="mailto:<?php echo esc_attr( get_theme_mod( "email" ) ); ?>" target="_top">
-              <?php echo esc_html( get_theme_mod('email') ); ?>
+            <a href="mailto:<?php echo esc_attr( get_theme_mod( 'email' ) ); ?>" target="_top">
+              <?php echo esc_html( get_theme_mod( 'email' ) ); ?>
             </a>
           </div>
         <?php endif; ?>
@@ -64,21 +67,21 @@
 
     <header class="site-header">
       
-      <?php if ( has_nav_menu( "header" ) ) : ?>
+      <?php if ( has_nav_menu( 'header' ) ) : ?>
         <div class="site-header-nav-container">
       
           <input type="checkbox" id="site-header-nav-toggle" />
 
           <label for="site-header-nav-toggle" id="site-header-nav-toggle-label">
             <span></span>
-            <span class="screen-reader-text"><?php _e( "Toggle menu", "desmo2020" ); ?></span>
+            <span class="screen-reader-text"><?php _e( 'Toggle menu', 'desmo2020' ); ?></span>
           </label><!-- #header-nav-toggle-label -->
 
           <?php
           wp_nav_menu( array (
-            "theme_location" => "header",
-            "menu_id"        => "site-header-nav",
-            "container"      => false
+            'theme_location' => 'header',
+            'menu_id'        => 'site-header-nav',
+            'container'      => false
           ) );
           ?>
     
@@ -88,11 +91,11 @@
       <?php if( !is_home() ) : ?>
         <div class="site-identity">
       
-          <a class="site-title" href="<?php echo esc_url( home_url( "/" ) ); ?>" title="<?php bloginfo( "name" ) ?>"><?php bloginfo( "name" ); ?></a><!-- .site-title -->
+          <a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>"><?php bloginfo( 'name' ); ?></a><!-- .site-title -->
 
-          <?php if ( function_exists( "the_custom_logo" ) ) the_custom_logo(); ?>
+          <?php if ( function_exists( 'the_custom_logo' ) ) the_custom_logo(); ?>
 
-          <span class="site-tagline"><?php bloginfo( "description" ); ?></span><!-- .site-tagline -->
+          <span class="site-tagline"><?php bloginfo( 'description' ); ?></span><!-- .site-tagline -->
       
         </div><!-- .site-identity -->
       <?php endif; ?>
@@ -104,8 +107,8 @@
       <?php if ( is_singular() ): ?>
 
         <?php
-        if ( is_singular() && get_the_post_thumbnail() !== "" ) {
-          the_post_thumbnail( "desmo2020-featured_image_full" );
+        if ( is_singular() && get_the_post_thumbnail() !== '' ) {
+          the_post_thumbnail( 'desmo2020-featured_image_full' );
         }
         ?>
     
@@ -114,8 +117,8 @@
           
           <?php
           printf(
-            "<h1 class=>%s</h1>",
-            get_the_title() === "" ? __( "Untitled post", "desmo2020" ) : get_the_title()
+            '<h1 class=>%s</h1>',
+            get_the_title() === '' ? __( 'Untitled post', 'desmo2020' ) : get_the_title()
           );
           ?>
 

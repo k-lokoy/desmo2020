@@ -3,8 +3,8 @@
  * Template for displaying no content
  *
  * @package desmo2020
- * @since   1.1.0
- * @version 1.1.0
+ * @since   1.0.0
+ * @version 1.1.0 [Improved content layouts]
  */
 ?>
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

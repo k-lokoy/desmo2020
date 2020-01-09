@@ -19,7 +19,8 @@
   border-radius: var(--border-radius);
   transition: all .3s ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--color-bg-2);
   }
 }
@@ -29,7 +30,8 @@
   border-color: var(--color-scheme);
   color: var(--color-scheme);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: transparent;
     border-color: var(--color-bg-2);
     color: var(--color-bg-2);

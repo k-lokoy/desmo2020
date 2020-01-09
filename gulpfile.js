@@ -1,24 +1,31 @@
-const gulp    = require("gulp")
-const plumber = require("gulp-plumber")
-const sass    = require("gulp-sass")
-const prefix  = require("gulp-autoprefixer")
-const wpPot   = require("gulp-wp-pot")
-const sort    = require("gulp-sort")
-const zip     = require("gulp-zip")
-const pkg     = require("./package.json")
-
-const info = {
-  name:      "desmo2020",
-  slug:      "desmo2020",
-  version:   pkg.version,
-  author:    "Lokøy Design",
-  email:     "kennethlokoy@gmail.com",
-  bugReport: "https://github.com/lokoydesign/desmo2020/issues"
-}
+const gulp     = require("gulp")
+const plumber  = require("gulp-plumber")
+const sass     = require("gulp-sass")
+const sassVars = require("gulp-sass-variables")
+const prefix   = require("gulp-autoprefixer")
+const wpPot    = require("gulp-wp-pot")
+const sort     = require("gulp-sort")
+const zip      = require("gulp-zip")
+const pkg      = require("./package.json")
 
 function css() {
   return gulp.src("./scss/**/*.scss")
     .pipe(plumber())
+    .pipe(sassVars({
+      $name:          pkg.name,
+      $themeURI:      pkg.wordpress.themeURI,
+      $author:        pkg.author,
+      $authorURI:     pkg.wordpress.authorURI,
+      $description:   pkg.description,
+      $requires:      pkg.wordpress.requires,
+      $version:       pkg.version,
+      $licenseFull:   pkg.wordpress.licenseFull,
+      $licenseURI:    pkg.wordpress.licenseURI,
+      $tags:          pkg.wordpress.tags.join(", "),
+      $textDomain:    pkg.wordpress.textDomain,
+      $copyrightYear: pkg.wordpress.copyrightYear,
+      $license:       pkg.license
+    }))
     .pipe(sass({outputStyle: "expanded", includePaths: ["scss"]}))
     .pipe(prefix(["last 30 versions", "> 1%", "ie 8", "ie 7"], {cascade: true}))
     .pipe(gulp.dest("./"))
@@ -29,29 +36,29 @@ function pot() {
     .pipe(plumber())
     .pipe(sort())
     .pipe(wpPot({
-        domain:         info.slug,
-        package:        info.slug,
-        bugReport:      info.bugReport,
-        lastTranslator: `${info.author} <${info.email}>`,
-        team:           `${info.author} <${info.email}>`
+        domain:         pkg.name,
+        package:        pkg.name,
+        bugReport:      pkg.bugs.url,
+        lastTranslator: pkg.author,
+        team:           pkg.author
     }))
-    .pipe(gulp.dest(`./languages/${info.slug}.pot`))
+    .pipe(gulp.dest(`./languages/${pkg.name}.pot`))
 }
 
 function distribute() {
   return gulp.src([
     "./**/*.*",
     "!./.git",
-    "!./node_modules/**/*.*",
-    "!./dist/**/*.*",
-    "!./scss/**/*.*",
     "!./.gitignore",
+    "!./dist/**/*.*",
     "!./gulpfile.js",
-    "!./package.json",
+    "!./node_modules/**/*.*",
     "!./package-lock.json",
+    "!./package.json",    
+    "!./scss/**/*.*",
   ], {
     base: ".."
-  }).pipe(zip(`${info.slug}_${info.version}.zip`))
+  }).pipe(zip(`${pkg.name}_${pkg.version}.zip`))
     .pipe(gulp.dest("./dist"))
 }
 

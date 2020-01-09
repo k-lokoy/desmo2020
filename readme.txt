@@ -4,7 +4,7 @@ Author: Lokøy Design (http://lokoydesign.github.io/)
 License: GNU General Public License v3
 
 # Copyright
-desmo2020 WordPress Theme, Copyright (C) 2019, Lokøy Design
+desmo2020 WordPress Theme, Copyright (C) 2019-2020, Lokøy Design
 desmo2020 is distributed under the terms of the GNU GPL v3
 
 This program is free software: you can redistribute it and/or modify
@@ -22,13 +22,15 @@ GNU General Public License for more details.
 # Libraries
 # The theme bundles the following third-party resources:
 
-normalize.css v8.0.0
-License: MIT
-Source: github.com/necolas/normalize.css
+normalize.css v8.0.1
+  License: MIT
+  Source: github.com/necolas/normalize.css
 
-Font awesome v5.11.2
-License: Font Awesome Free License
-Source: https://fontawesome.com/license/free
+Font Awesome 5.11.2
+  Icons License: CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
+  Fonts License: SIL OFL 1.1 https://scripts.sil.org/OFL
+  Code License: MIT https://opensource.org/licenses/MIT
+  Source: https://fontawesome.com
 
 -----------------------------------------------------------------------------
 
@@ -43,9 +45,16 @@ License: Ubuntu Font License
 # Changelog
 
 # TODO
-- Add customized styles to editor styles
 - Add footer menu
 - Advertise theme author in footer
+
+1.2.3 - 2020-01-09
+- Added more social media icons
+- Updated normalize.css
+- Improved keyboard navigation
+- Fixed error if "pll_the_languages" function does not exist
+- Fixed toolbar covering captions in block editor
+- Fixed image alignment in side header
 
 1.2.2 - 2019-12-12
 - Changed anchor color setting to color scheme setting
@@ -77,7 +86,7 @@ License: Ubuntu Font License
 
 1.1.0 - 2019-11-22
 - Added support for image and attachment pages
-- added full width image size
+- Added full width image size
 - Fixed widget areas layout and spacing
 - Fixed missing translations
 - Fixed editor margin

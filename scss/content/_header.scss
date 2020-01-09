@@ -13,7 +13,8 @@
     a {
       color: var(--color-txt);
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: var(--color-scheme);
       }
     }

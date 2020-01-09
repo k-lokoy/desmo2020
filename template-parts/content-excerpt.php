@@ -4,15 +4,16 @@
  *
  * @package desmo2020
  * @since   1.1.0
- * @version 1.2.0
+ * @version 1.2.0 [Fixed featured image sizes]
+ * @version 1.2.0 [Fixed content not showing on archive pages with excerpts]
  */
 ?>
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="entry-header">  
     <?php
     printf(
-      "<h2><a href=\"%2\$s\">%1\$s</a></h2>",
-      get_the_title() === "" ? __( "Untitled post", "desmo2020" ) : get_the_title(), 
+      '<h2><a href="%2$s">%1$s</a></h2>',
+      get_the_title() === '' ? __( 'Untitled post', 'desmo2020' ) : get_the_title(), 
       esc_url( get_permalink() )
     );
     ?>
@@ -42,7 +43,7 @@
 
   <?php if ( get_the_post_thumbnail() !== "" ): ?>
     <a class="post-thumbnail" href="<?php the_permalink() ?>">
-      <?php the_post_thumbnail( "desmo2020-featured_image" ); ?>
+      <?php the_post_thumbnail( 'desmo2020-featured_image' ); ?>
     </a><!-- .post-thumbnail -->
   <?php endif; ?>
 

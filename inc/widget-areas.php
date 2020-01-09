@@ -4,7 +4,6 @@
  *
  * @package desmo2020
  * @since  1.0.0
- * @version 1.0.0
  */
 
 function desmo2020_widgets_init() {

@@ -567,8 +567,9 @@ article::after {
   transition: all .3s ease-in-out;
 }
 
-.wp-block-button__link:hover,
-.wp-block-file .wp-block-file__button:hover {
+.wp-block-button__link:hover, .wp-block-button__link:focus,
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-file .wp-block-file__button:focus {
   background-color: var(--color-bg-2);
 }
 
@@ -578,7 +579,7 @@ article::after {
   color: var(--color-scheme);
 }
 
-.is-style-outline .wp-block-button__link:hover {
+.is-style-outline .wp-block-button__link:hover, .is-style-outline .wp-block-button__link:focus {
   background-color: transparent;
   border-color: var(--color-bg-2);
   color: var(--color-bg-2);

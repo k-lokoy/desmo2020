@@ -154,7 +154,8 @@ body.home {
       position: relative;
       margin: 0 1em 1em 0;
     
-      &:hover > ul { 
+      &:hover > ul, 
+      &:focus-within > ul { 
         display: grid;
       }
     }
@@ -172,7 +173,8 @@ body.home {
       margin-top: 0px;
       z-index: 100;
 
-      a:hover {
+      a:hover,
+      a:focus-within {
         color: var(--color-scheme);
       }
     }

@@ -4,7 +4,7 @@
  *
  * @package desmo2020
  * @since   1.1.0
- * @version 1.2.0
+ * @version 1.2.0 [Fixed image/attachment pages]
  */
 ?>
 <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -12,8 +12,8 @@
     <header class="entry-header">  
       <?php
       printf(
-        "<h2><a href=\"%2\$s\">%1\$s</a></h2>",
-        get_the_title() === "" ? __( "Untitled post", "desmo2020" ) : get_the_title(), 
+        '<h2><a href="%2$s">%1$s</a></h2>',
+        get_the_title() === '' ? __( 'Untitled post', 'desmo2020' ) : get_the_title(), 
         esc_url( get_permalink() )
       );
       ?>
@@ -44,7 +44,7 @@
 
   <article>
     <?php
-    $image_size = apply_filters( "desmo2020", "full_width" );
+    $image_size = apply_filters( 'desmo2020', 'full_width' );
 
     echo wp_get_attachment_image( get_the_ID(), $image_size );
     ?>
@@ -55,10 +55,10 @@
     the_content();      
 
     wp_link_pages( array (
-      "before"      => "<div class=\"page-links\">" . __( "Pages:", "desmo2020" ),
-      "after"       => "</div>",
-      "link_before" => "<span class=\"page-number\">",
-      "link_after"  => "</span>",
+      'before'      => '<div class="page-links">' . __( 'Pages:', 'desmo2020' ),
+      'after'       => '</div>',
+      'link_before' => '<span class="page-number">',
+      'link_after'  => '</span>',
     ) );
     ?>
 
@@ -70,7 +70,7 @@
       $desmo2020_categories_list = get_the_category_list( ', ' );
       if ( $desmo2020_categories_list && !is_archive() ): ?>
         <div class="post-categories">
-          <span><?php _e( "Categories:", "desmo2020" ); ?></span>
+          <span><?php _e( 'Categories:', 'desmo2020' ); ?></span>
           <?php echo $desmo2020_categories_list; ?>
         </div><!-- .post-categories -->
       <?php endif; ?>
@@ -79,7 +79,7 @@
       $desmo2020_tags_list = get_the_tag_list();
       if ( $desmo2020_tags_list ) : ?>
         <div class="post-tags">
-          <span><?php _e( "Tags:", "desmo2020" ); ?></span>
+          <span><?php _e( 'Tags:', 'desmo2020' ); ?></span>
           <?php echo $desmo2020_tags_list; ?>
         </div><!-- .post-tags -->
       <?php endif; ?>

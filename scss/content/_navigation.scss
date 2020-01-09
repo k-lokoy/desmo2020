@@ -38,7 +38,8 @@
   }
 
   .page-numbers.current,
-  a:hover {
+  a:hover,
+  a:focus {
     background-color: var(--color-bg-2);
   }
 }

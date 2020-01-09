@@ -51,7 +51,8 @@
     transform: rotate(-45deg);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--color-bg-2);
   }
 }

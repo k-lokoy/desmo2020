@@ -9,29 +9,42 @@
   * Social media icons
   *
   * @since 1.2.0
-  * @version 1.2.0
   */
 $desmo2020_social_icons = array(
-  'Twitter'     =>  'fa-twitter',
-  'Facebook'    =>  'fa-facebook-f',
-  'Instagram'   =>  'fa-instagram',
-  'SnapChat'    =>  'fa-snapchat-ghost',
-  'LinkedIn'    =>  'fa-linkedin',
-  'YouTube'     =>  'fa-youtube',
-  'Twitch'      =>  'fa-twitch',
-  'Vimeo'       =>  'fa-vimeo',
-  'Pinterest'   =>  'fa-pinterest',
-  'Flickr'      =>  'fa-flickr',
-  'Tumblr'      =>  'fa-tumblr',
-  'Spotify'     =>  'fa-spotify',
-  'Soundcloud'  =>  'fa-soundcloud',
-  'BitCoin'     =>  'fa-btc',
+  'Amazon'        =>  'fa-amazon',
+  'Behance'       =>  'fa-behance',
+  'BitBucket'     =>  'fa-bitbucket',
+  'Bitcoin'       =>  'fa-bitcoin',
+  'Discord'       =>  'fa-discord',
+  'Etsy'          =>  'fa-etsy',
+  'Facebook'      =>  'fa-facebook',
+  'Flickr'        =>  'fa-flickr',
+  'GitHub'        =>  'fa-github',
+  'Google+'       =>  'fa-google-plus',
+  'Instagram'     =>  'fa-instagram',
+  'LastFM'        =>  'fa-lastfm',
+  'LinkedIn'      =>  'fa-linkedin',
+  'MixCloud'      =>  'fa-mixcloud',
+  'Pinterest'     =>  'fa-pinterest',
+  'PlayStation'   =>  'fa-playstation',
+  'Reddit'        =>  'fa-reddit-alien',
+  'SnapChat'      =>  'fa-snapchat-ghost',
+  'Soundcloud'    =>  'fa-soundcloud',
+  'Spotify'       =>  'fa-spotify',
+  'Steam'         =>  'fa-steam',
+  'Teamspeak'     =>  'fa-teamspeak',
+  'Tumblr'        =>  'fa-tumblr',
+  'Twitch'        =>  'fa-twitch',
+  'Twitter'       =>  'fa-twitter',
+  'Vimeo'         =>  'fa-vimeo',
+  'Vine'          =>  'fa-vine',
+  'Xbox'          =>  'fa-xbox',
+  'YouTube'       =>  'fa-youtube'
 );
 /**
  * Formated social media elements
  * 
  * @since 1.2.0
- * @version 1.2.0
  * @return Element [div.desmo2020-social]
  */
 function desmo2020_social_links() {
